@@ -1,0 +1,8 @@
+# vim backup etc
+_backup
+_swap
+_undo
+
+# plugins
+plugged
+autoload
