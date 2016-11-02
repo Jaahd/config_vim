@@ -20,6 +20,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'SirVer/ultisnips'
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
