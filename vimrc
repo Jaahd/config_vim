@@ -21,6 +21,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
@@ -81,7 +82,6 @@ call RequireDirectory(expand("~") . "/.vim/_undo")
 "set relativenumber  " ruler with relative line number
 set number          " ruler with line number
 set hidden          " let change buffer without saving
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " remove trailing whitespaces
 autocmd BufWritePre *.py,*.js,*.hs,*.rs,*.html,*.css,*.scss,*.c,*.h,*.cpp,*.hpp silent! :%s/\s\+$//e
@@ -162,6 +162,16 @@ nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>f :CtrlPMRUFiles<CR>
 "}}}
 
+" Indentation {{{
+" Defaut indentation
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+" Language specific
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noet ai nocindent
+autocmd FileType html setlocal ts=2 sts=2 sw=2 noet ai
+autocmd FileType css setlocal ts=2 sts=2 sw=2 noet ai
+" }}}
+
 " Plugins configurations
 
 " linter {{{
@@ -174,8 +184,7 @@ let g:ale_cpp_gcc_options = '-Wall -Werror -Wextra -I./include -I./../include -s
 " set the ignore file for ctrlp plugin
 set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard |& egrep -v "\.(png|jpg|jpeg|gif)$|node_modules|bower_components"']
 " }}}
 
 " airline {{{
@@ -187,3 +196,11 @@ let g:airline_theme='distinguished'
 let g:cpp_class_scope_highlight = 1
 "}}}
 
+" Ultisnips {{{
+let g:UltisnipsUsePythonVersion = 3
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" }}}
