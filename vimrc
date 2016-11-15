@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Yggdroot/indentLine'
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
