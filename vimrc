@@ -27,7 +27,7 @@ Plug 'honza/vim-snippets'
 Plug 'altercation/vim-colors-solarized'
 
 " highlighting improvement
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
