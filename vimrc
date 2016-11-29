@@ -20,8 +20,11 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Yggdroot/indentLine'
+Plug 'godlygeek/tabular'
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
