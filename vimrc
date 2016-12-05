@@ -89,7 +89,14 @@ set number          " ruler with line number
 set hidden          " let change buffer without saving
 
 " remove trailing whitespaces
-autocmd BufWritePre *.py,*.js,*.hs,*.rs,*.html,*.css,*.scss,*.c,*.h,*.cpp,*.hpp silent! :%s/\s\+$//e
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre *.py,*.js,*.hs,*.rs,*.html,*.css,*.scss,*.c,*.h,*.cpp,*.hpp silent! :call <SID>StripTrailingWhitespaces()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
