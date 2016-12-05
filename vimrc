@@ -16,22 +16,24 @@ Plug 'w0rp/ale'
 Plug 'maralla/completor.vim'
 
 " ide like
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'tpope/vim-surround'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'Yggdroot/indentLine'
-Plug 'godlygeek/tabular'
+Plug 'ctrlpvim/ctrlp.vim'               " file fuzzy search
+Plug 'vim-airline/vim-airline'          " status bar
+Plug 'vim-airline/vim-airline-themes'   " status bar themes
+Plug 'tpope/vim-surround'               " sourround modifyer helper
+Plug 'tpope/vim-fugitive'               " git helper
+Plug 'SirVer/ultisnips'                 " snippet engine
+Plug 'honza/vim-snippets'               " snippets for Ultisnips
+Plug 'Yggdroot/indentLine'              " indentation helper
+Plug 'godlygeek/tabular'                " vertical alignment helper
 
 " colorscheme
 Plug 'altercation/vim-colors-solarized'
 
-" highlighting improvement
+" language improvement
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
@@ -206,4 +208,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" }}}
+
+" Tern {{{
+let g:tern_show_argument_hints='on_hold'
+let g:tern_map_keys=1
 " }}}
