@@ -23,7 +23,7 @@ Plug 'tpope/vim-surround'               " sourround modifyer helper
 Plug 'tpope/vim-fugitive'               " git helper
 Plug 'SirVer/ultisnips'                 " snippet engine
 Plug 'honza/vim-snippets'               " snippets for Ultisnips
-Plug 'Yggdroot/indentLine'              " indentation helper
+Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
 
 " colorscheme
@@ -215,6 +215,14 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" }}}
+
+" vim-indent-guides {{{
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 " }}}
 
 " Tern {{{
