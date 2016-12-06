@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " completion
-Plug 'maralla/completor.vim'
+Plug 'Valloric/YouCompleteMe'
 
 " ide like
 Plug 'ctrlpvim/ctrlp.vim'               " file fuzzy search
