@@ -208,6 +208,12 @@ let g:airline_theme='distinguished'
 let g:cpp_class_scope_highlight = 1
 "}}}
 
+" YouCompleteMe {{{
+
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>'] 
+" }}}
+
 " Ultisnips {{{
 let g:UltisnipsUsePythonVersion = 3
 
@@ -226,6 +232,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 " }}}
 
 " Tern {{{
-let g:tern_show_argument_hints='on_hold'
-let g:tern_map_keys=1
+"let g:tern_show_argument_hints='on_hold'
+"let g:tern_map_keys=1
 " }}}
