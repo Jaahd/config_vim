@@ -27,7 +27,7 @@ Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
 
 " colorscheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " language improvement
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
@@ -119,8 +119,7 @@ set wildignore=*.o,*.out,*.obj,*.pyc,.git,.hgignore,.svn,.cvsignore,*/tmp/*,*.so
 "set t_Co=256            " force vim to use 256 colors
 set background=dark
 syntax on               " syntax highlighting
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
 
 " look improvement
 "set fillchars=stl:─,stlnc:─,vert:│,fold:─,diff:─
@@ -148,6 +147,13 @@ set sidescrolloff=5
 " split screen below and right instead of vim natural
 set splitbelow
 set splitright
+
+" gvim
+set guioptions-=m  " remove menu bar
+set guioptions-=T  " remove toolbar
+set guioptions-=r  " remove right-hand scroll bar
+set guioptions-=L  " remove left-hand scroll bar
+set guioptions-=e  " tab appearance like in term
 
 " }}}1
 
