@@ -25,6 +25,7 @@ Plug 'SirVer/ultisnips'                 " snippet engine
 Plug 'honza/vim-snippets'               " snippets for Ultisnips
 Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
+Plug 'mileszs/ack.vim'                  " ack/ag from vim
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -110,7 +111,7 @@ set hlsearch    " highlight search result
 
 " completion {{{
 set wildmenu                     " show more than one suggestion for completion
-set wildmode=list:longest        " shell-like completion (up to ambiguity point)
+set wildmode=list:longest,full   " shell-like completion (up to ambiguity point)
 set wildignore=*.o,*.out,*.obj,*.pyc,.git,.hgignore,.svn,.cvsignore,*/tmp/*,*.so,*.swp,*.zip
 " }}}
 
@@ -175,9 +176,6 @@ nnoremap Q @q
 map <space> <leader>
 
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
-nnoremap <silent> <Leader>o :CtrlP<CR>
-nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>f :CtrlPMRUFiles<CR>
 "}}}
 
 " Indentation {{{
@@ -203,6 +201,10 @@ let g:ale_cpp_gcc_options = '-Wall -Werror -Wextra -I./include -I./../include -s
 set wildignore+=*.so,*.swp,*.zip     " MacOSX/Linux
 
 let g:ctrlp_user_command = ['.git', 'git --git-dir=%s/.git ls-files -oc --exclude-standard |& egrep -v "\.(png|jpg|jpeg|gif)$|node_modules|bower_components"']
+
+nnoremap <silent> <Leader>o :CtrlP<CR>
+nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>f :CtrlPMRUFiles<CR>
 " }}}
 
 " airline {{{
@@ -240,4 +242,12 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=black
 " Tern {{{
 "let g:tern_show_argument_hints='on_hold'
 "let g:tern_map_keys=1
+" }}}
+
+" Ack / ag {{{
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
+nnoremap <silent> <Leader>a :Ack!<space>
 " }}}
