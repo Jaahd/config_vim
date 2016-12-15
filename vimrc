@@ -32,9 +32,7 @@ Plug 'morhetz/gruvbox'
 
 " language improvement
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
-"Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-"Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
