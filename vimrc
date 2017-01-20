@@ -26,6 +26,7 @@ Plug 'honza/vim-snippets'               " snippets for Ultisnips
 Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
 Plug 'mileszs/ack.vim'                  " ack/ag from vim
+Plug 'jiangmiao/auto-pairs'             " smart bracket/quote/...
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -168,6 +169,7 @@ noremap <Up> <nop>
 " }}}
 
 " convenient shortcut {{{
+" default macro
 nnoremap Q @q
 "}}}
 
@@ -249,4 +251,9 @@ if executable('ag')
 endif
 
 nnoremap <silent> <Leader>a :Ack!<space>
+" }}}
+
+" auto-pairs {{{
+let g:AutoPairsFlyMode = 0
+let g:AutoPairsShortcutBackInsert = '<M-b>'
 " }}}
