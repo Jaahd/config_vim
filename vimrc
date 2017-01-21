@@ -170,6 +170,7 @@ noremap <Up> <nop>
 " }}}
 
 " convenient shortcut {{{
+" default macro
 nnoremap Q @q
 "}}}
 
