@@ -26,6 +26,7 @@ Plug 'honza/vim-snippets'               " snippets for Ultisnips
 Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
 Plug 'mileszs/ack.vim'                  " ack/ag from vim
+Plug 'vim-scripts/auto-pairs-gentle'    " auto pair handling
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -33,6 +34,7 @@ Plug 'morhetz/gruvbox'
 " language improvement
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['c', 'cpp'] }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -216,9 +218,8 @@ let g:cpp_class_scope_highlight = 1
 "}}}
 
 " YouCompleteMe {{{
-
 let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>'] 
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 " }}}
 
 " Ultisnips {{{
@@ -249,4 +250,8 @@ if executable('ag')
 endif
 
 nnoremap <silent> <Leader>a :Ack!<space>
+" }}}
+
+" auto-pairs-gentle {{{
+let g:AutoPairsUseInsertedCount = 1
 " }}}
