@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
 
 " completion
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 
 " ide like
 Plug 'ctrlpvim/ctrlp.vim'               " file fuzzy search
