@@ -26,7 +26,7 @@ Plug 'honza/vim-snippets'               " snippets for Ultisnips
 Plug 'nathanaelkane/vim-indent-guides'  " indentation helper
 Plug 'godlygeek/tabular'                " vertical alignment helper
 Plug 'mileszs/ack.vim'                  " ack/ag from vim
-Plug 'vim-scripts/auto-pairs-gentle'    " auto pair handling
+Plug 'Raimondi/delimitMate'             " smart pairs
 
 " colorscheme
 Plug 'morhetz/gruvbox'
@@ -253,6 +253,8 @@ endif
 nnoremap <silent> <Leader>a :Ack!<space>
 " }}}
 
-" auto-pairs-gentle {{{
-let g:AutoPairsUseInsertedCount = 1
+" delimitMate {{{
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+nnoremap <silent> <Leader>d :DelimitMateSwitch<CR>
 " }}}
