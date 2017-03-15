@@ -71,12 +71,12 @@ fun! RequireDirectory(directory)
 endf
 
 " // means use the file's full path
-set dir=~/.vim/_swap//
+set dir=~/.vim/_swap/
 call RequireDirectory(expand("~") . "/.vim/_swap")
 
 " backup files (~) in a common location if possible
 set backup
-set backupdir=~/.vim/_backup/,~/tmp,/tmp
+set backupdir=~/.vim/_backup/
 call RequireDirectory(expand("~") . "/.vim/_backup")
 
 " turn on undo files, put them in a common location
@@ -172,6 +172,10 @@ noremap <Up> <nop>
 " convenient shortcut {{{
 " default macro
 nnoremap Q @q
+
+" save and restore session
+nnoremap <F2> :mksession! ~/.vim/_vim_session <cr>
+nnoremap <F3> :source ~/.vim/_vim_session <cr>
 "}}}
 
 " leader {{{

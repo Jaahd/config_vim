@@ -2,6 +2,7 @@
 _backup
 _swap
 _undo
+_vim_session
 
 # plugins
 plugged
