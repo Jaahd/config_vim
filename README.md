@@ -11,3 +11,4 @@ uncomment/add
 ```
    set t_Co=256
 ```
+before setting the colorscheme
